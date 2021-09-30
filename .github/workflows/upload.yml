@@ -1,0 +1,16 @@
+name: upload
+
+on: [push]
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    steps:
+      - shell: bash
+        run: |
+          expr 3 + 7 > math-homework.txt
+      - name: Upload math result
+        uses: actions/upload-artifact@v2
+        with:
+          name: homework
+          path: math-homework.txt
