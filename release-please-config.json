@@ -1,0 +1,17 @@
+{
+  "bootstrap-sha": "a0d9fe9461be4f04cbe6c1b36b9456c348154159",
+  "group-pull-request-title-pattern": "chore: release ${branch}",
+  "tag-separator": "/",
+  "packages": {
+    "model-1": {
+      "package-name": "model-1",
+      "release-type": "go",
+      "changelog-path": "CHANGELOG.md"
+    },
+    "model-2": {
+      "package-name": "model-2",
+      "release-type": "go",
+      "changelog-path": "CHANGELOG.md"
+    }
+  }
+}
