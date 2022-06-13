@@ -18,7 +18,7 @@ jobs:
       - uses: trstringer/manual-approval@v1
         with:
           secret: ${{ secrets.GITHUB_TOKEN }}
-          approvers: neohsu
+          approvers: NeoHsu
       - name: Deploy to production
         run: echo deploying
 
