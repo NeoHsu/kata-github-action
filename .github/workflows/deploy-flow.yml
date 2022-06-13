@@ -1,0 +1,24 @@
+name: deploy flow
+
+on:
+  workflow_dispatch:
+permissions: write
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build
+        run: echo building
+  deploy:
+    name: deploy
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: trstringer/manual-approval@v1
+        with:
+          secret: ${{ secrets.GITHUB_TOKEN }}
+          approvers: neohsu
+      - name: Deploy to production
+        run: echo deploying
+
