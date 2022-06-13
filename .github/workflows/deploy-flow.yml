@@ -2,7 +2,7 @@ name: deploy flow
 
 on:
   workflow_dispatch:
-permissions: write
+permissions: write-all
 jobs:
   build:
     name: build
