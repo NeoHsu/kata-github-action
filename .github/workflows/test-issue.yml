@@ -19,3 +19,6 @@ jobs:
         run: echo "$GITHUB_CONTEXT"
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
+      - name: test approved flow
+        run: echo "Neo approved issue"
+        if: github.event.comment.user.login == 'NeoHsu' && github.event.comment.body == 'approved'
